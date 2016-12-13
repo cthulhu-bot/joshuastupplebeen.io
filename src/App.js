@@ -1,18 +1,33 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import { darkBaseTheme } from 'material-ui/styles/baseThemes/darkBaseTheme';
+import Link from './components/link';
+import Header from './components/header';
+import { Grid, Row, Col } from 'react-bootstrap';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <h2>Welcome to React</h2>
+      <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+        <div className="App">
+          <div className="App-header">
+            <h2>Welcome to balls</h2>
+          </div>
+          <Grid>
+            <Row>
+              <Col xs={3} md={2}>
+                <Link></Link>
+              </Col>
+              <Col xs={3} md={2}>
+                <Link></Link>
+              </Col>
+            </Row>
+          </Grid>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      </MuiThemeProvider>
     );
   }
 }

@@ -6,15 +6,16 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import { darkBaseTheme } from 'material-ui/styles/baseThemes/darkBaseTheme';
 import Link from './components/link';
 import Header from './components/header';
+import AppBar from 'material-ui/AppBar';
 import { Grid, Row, Col } from 'react-bootstrap';
 
 class App extends Component {
   render() {
     return (
-      <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
-        <div className="App">
+	    <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+        <div className="App-titlebar">
           <div className="App-header">
-            <h2>Welcome to balls</h2>
+            <h2>joshuastupplebeen.io</h2>
           </div>
           <Grid>
             <Row>

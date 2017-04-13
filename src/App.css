@@ -1,5 +1,6 @@
-.App {
-  text-align: center;
+.App-titlebar {
+    text-align: left;
+    background-color: black;
 }
 
 .App-logo {

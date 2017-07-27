@@ -1,18 +1,28 @@
 import React, { Component } from 'react'
 
 class Canvas extends Component {
+
+    constructor(props) {
+	super(props)
+    }
+
+    handleClick = (event) => {
+	console.log('click')
+    }
+    
     componentDidMount() {
-	this.updateCanvas();
+	this.updateCanvas()
+	window.addEventListener('click', this.handleClick)
     }
 
     componentWillReceiveProps() {
-	this.updateCanvas();
+    	this.updateCanvas()
     }
 
     updateCanvas() {
 	const ctx = this.canvas.getContext('2d')
 	ctx.fillRect(0, 0, 100, 100)
-	ctx.fillStyle = 'pink'
+	ctx.fillStyle = 'red'
     }
     
     render() {
@@ -21,7 +31,7 @@ class Canvas extends Component {
                         width={this.props.width}
                         height={this.props.height}
             ref={canvas => this.canvas = canvas }/>
-	);
+	)
     }
 }
 

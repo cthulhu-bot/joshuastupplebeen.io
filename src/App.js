@@ -7,8 +7,10 @@ import { darkBaseTheme } from 'material-ui/styles/baseThemes/darkBaseTheme';
 import Link from './components/link';
 import Header from './components/header';
 import AppBar from 'material-ui/AppBar';
-import { Grid, Row, Col } from 'react-bootstrap';
+import Canvas from './components/canvas';
+import { Grid, Row, Col, Image } from 'react-bootstrap';
 import Section from './components/section';
+import image01 from '../public/01.png';
 
 class App extends Component {
 
@@ -35,8 +37,19 @@ class App extends Component {
     }
     
     render() {
-	console.log("activeClass: ", this.state.activeClass);
-
+	const imageOneProps = {
+	    src: "../public/01.png",
+	};
+	const imageTwoProps = {
+	    src: "../public/02.png",
+	};
+	const imageThreeProps = {
+	    src: "../public/03.png",
+	};
+	const canvasProps = {
+	    width: 300,
+	    height: 200
+	};
 	const sectionOneProps = {
 	    activeClass: this.state.activeClass,
 	    text: "Content 1"
@@ -51,7 +64,6 @@ class App extends Component {
 	};
 	
 	return (
-		<MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
 		<div>
 		<div className="App-titlebar">
 		<div className="App-header">
@@ -64,13 +76,12 @@ class App extends Component {
 		</ul>
 		</nav>
 		</div>
-		<Section { ...sectionOneProps } />
 		<Section { ...sectionTwoProps } />
 		<Section { ...sectionThreeProps } />
+		<Canvas { ...canvasProps } />
 		<footer className="main-footer">Footer</footer>
 		</div>
 		</div>
-		</MuiThemeProvider>
 	);
     }
 }

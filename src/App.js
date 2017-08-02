@@ -47,8 +47,8 @@ class App extends Component {
 	    src: "../public/03.png",
 	};
 	const canvasProps = {
-	    width: 300,
-	    height: 200
+	    width: 1024,
+	    height: 768
 	};
 	const sectionOneProps = {
 	    activeClass: this.state.activeClass,

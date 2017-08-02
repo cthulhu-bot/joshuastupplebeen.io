@@ -21,8 +21,21 @@ class Canvas extends Component {
 
     updateCanvas() {
 	const ctx = this.canvas.getContext('2d')
-	ctx.fillRect(0, 0, 100, 100)
-	ctx.fillStyle = 'red'
+	
+	// ctx.fillRect(0, 0, 1024, 768)
+	// ctx.fillStyle = 'red'
+
+	ctx.beginPath()
+	ctx.arc(20, 120, 10, 0, Math.PI*2)
+	ctx.strokeStyle = 'red'
+	ctx.stroke()
+	ctx.closePath()
+
+	ctx.beginPath()
+	ctx.arc(120, 20, 10, 0, Math.PI*2)
+	ctx.strokeStyle = 'purple'
+	ctx.stroke()
+	ctx.closePath()
     }
     
     render() {
@@ -31,7 +44,7 @@ class Canvas extends Component {
                         width={this.props.width}
                         height={this.props.height}
             ref={canvas => this.canvas = canvas }/>
-	)
+	);
     }
 }
 

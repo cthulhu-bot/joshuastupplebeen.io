@@ -22,8 +22,8 @@ class Canvas extends Component {
     updateCanvas() {
 	const ctx = this.canvas.getContext('2d')
 	
-	// ctx.fillRect(0, 0, 1024, 768)
-	// ctx.fillStyle = 'red'
+	ctx.fillRect(500, 50, 50, 50)
+	ctx.fillStyle = 'red'
 
 	ctx.beginPath()
 	ctx.arc(20, 120, 10, 0, Math.PI*2)

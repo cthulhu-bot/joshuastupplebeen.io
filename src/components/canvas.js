@@ -9,7 +9,7 @@ class Canvas extends Component {
     handleClick = (event) => {
 	console.log('click')
     }
-    
+
     componentDidMount() {
 	this.updateCanvas()
 	window.addEventListener('click', this.handleClick)
@@ -64,7 +64,7 @@ class Canvas extends Component {
 	// ctx.stroke()
 	// ctx.closePath()
     }
-    
+
     render() {
 	return (
 		<canvas id="canvas"

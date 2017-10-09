@@ -4,7 +4,7 @@
 }
 
 .App-header {
-  margin: 5px;
+  margin: 1px;
   min-width: 100%;
   background-color: #222;
   height: 50px;
@@ -42,14 +42,14 @@
     color: black;
     min-height: 40vh;
     padding: 10px;
-    background-color: white;
+    background-color: #222;
     margin: 1px;
 }
 .main-content2 {
     color: black;
     min-height: 40vh;
     padding: 10px;
-    background-color: white;
+    background-color: #314360;
     margin: 1px;
 }
 .main-content3 {
@@ -64,5 +64,5 @@
 .main-footer {
     color: black;
     padding: 10px;
-    background-color: white;
+    background-color: black;
 }

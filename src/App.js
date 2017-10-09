@@ -107,7 +107,6 @@ class App extends Component {
             <main className="main-content">
               <Section {...sectionOneProps} />
               <Section {...sectionTwoProps} />
-              <Paper style={paperStyle} zDepth={1} />
               <Section {...sectionThreeProps} />
               <Paper zDepth={1}>
                 <Canvas {...canvasProps} />

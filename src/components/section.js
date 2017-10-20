@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Paper from 'material-ui/Paper';
+import Card from './card';
 
 class Section extends Component {
   render() {
@@ -15,10 +16,10 @@ class Section extends Component {
 
     return (
        <section className={this.props.activeClass}>
-       <Paper zDepth={1}>
+       <Card>
         <h1>{this.props.text.header}</h1>
         <ul>{previewTextEntries}<br /></ul>
-        </Paper>
+        </Card>
        </section>
     );
   }

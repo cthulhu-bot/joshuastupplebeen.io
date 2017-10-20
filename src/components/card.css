@@ -1,0 +1,9 @@
+.paper-main a {
+    text-align: none;
+    color: white;
+    font-size: 21px;
+    font-weight: 600;
+    margin: 20px;
+    height: 500;
+    width: 500;
+}

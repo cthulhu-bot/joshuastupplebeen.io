@@ -11,8 +11,15 @@ class Section extends Component {
       display: 'inline-block',
     };
 
+    const previewTextEntries = this.props.text.previews;
+
     return (
-       <section className={this.props.activeClass}>{this.props.text}</section>
+       <section className={this.props.activeClass}>
+       <Paper zDepth={1}>
+        <h1>{this.props.text.header}</h1>
+        <ul>{previewTextEntries}<br /></ul>
+        </Paper>
+       </section>
     );
   }
 }

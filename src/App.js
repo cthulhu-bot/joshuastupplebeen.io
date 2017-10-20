@@ -13,11 +13,13 @@ import {Grid, Row, Col, Image} from 'react-bootstrap';
 import Section from './components/section';
 import image01 from '../public/01.png';
 import Paper from 'material-ui/Paper';
+import Button from './components/button';
 import {
   BottomNavigation,
   BottomNavigationButton,
 } from 'material-ui/BottomNavigation';
 import SvgIcon from 'material-ui/SvgIcon';
+import {sectionOneText} from './text';
 
 class App extends Component {
   constructor(props) {
@@ -27,7 +29,6 @@ class App extends Component {
   handleScroll = event => {
     const randomNumber = Math.floor(Math.random() * 3) + 1;
     const className = 'main-content' + randomNumber;
-    console.log('className: ', className);
     this.setState({
       activeClass: className,
     });
@@ -42,13 +43,23 @@ class App extends Component {
   }
 
   render() {
+    const width =
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
+
+    const height =
+      window.innerHeight ||
+      document.documentElement.clientHeight ||
+      document.body.clientHeight;
+
     const canvasProps = {
-      width: 1024,
-      height: 768,
+      width: width,
+      height: height,
     };
     const sectionOneProps = {
       activeClass: 'main-content1',
-      text: 'Content 1',
+      text: sectionOneText,
     };
     const sectionTwoProps = {
       activeClass: 'main-content2',
@@ -61,6 +72,7 @@ class App extends Component {
     const muiTheme = getMuiTheme({
       palette: {
         textColor: '#37474f',
+      height: 100,
       },
       appBar: {
         height: 50,
@@ -81,6 +93,8 @@ class App extends Component {
         <path d="github.svg" />
       </SvgIcon>
     );
+    const buttonProps = {
+    };
 
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
@@ -107,10 +121,8 @@ class App extends Component {
             <main className="main-content">
               <Section {...sectionOneProps} />
               <Section {...sectionTwoProps} />
-              <Section {...sectionThreeProps} />
-              <Paper zDepth={1}>
-                <Canvas {...canvasProps} />
-              </Paper>
+              <Canvas {...canvasProps} />
+              <Button {...buttonProps} />
             </main>
             <footer className="main-footer">Footer</footer>
           </div>

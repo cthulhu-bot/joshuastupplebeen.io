@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import {darkBaseTheme} from 'material-ui/styles/baseThemes/darkBaseTheme';
+import createMuiTheme from 'material-ui/styles/createMuiTheme';
+import createPalette from 'material-ui/styles/createPalette';
 import Link from './components/link';
 import Header from './components/header';
 import Footer from './components/footer';
@@ -70,14 +70,12 @@ class App extends Component {
       activeClass: 'main-content3',
       text: 'Content 3',
     };
-    const muiTheme = getMuiTheme({
-      palette: {
-        textColor: '#37474f',
-      height: 100,
-      },
-      appBar: {
-        height: 50,
-      },
+    const muiTheme = createMuiTheme({
+      palette: createPalette({
+          primary: 'grey',
+          accent: 'amber',
+          error: 'red',
+      })
     });
     const paperStyle = {
       height: 100,
@@ -94,11 +92,10 @@ class App extends Component {
         <path d="github.svg" />
       </SvgIcon>
     );
-    const buttonProps = {
-    };
+    const buttonProps = {};
 
     return (
-      <MuiThemeProvider muiTheme={muiTheme}>
+      <MuiThemeProvider theme={muiTheme}>
         <div>
           <div className="App-titlebar">
             <div className="App-header">

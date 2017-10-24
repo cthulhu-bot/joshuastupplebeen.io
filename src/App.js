@@ -60,6 +60,7 @@ class App extends Component {
     const sectionOneProps = {
       activeClass: 'main-content1',
       text: sectionOneText,
+      numCards: 2,
     };
     const sectionTwoProps = {
       activeClass: 'main-content2',

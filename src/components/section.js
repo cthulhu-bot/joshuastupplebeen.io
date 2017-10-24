@@ -11,16 +11,15 @@ class Section extends Component {
       textAlign: 'center',
       display: 'inline-block',
     };
-
-    const previewTextEntries = this.props.text.previews;
+    const cardProps = {
+      header: this.props.text.header,
+      preview: this.props.text.previews,
+    };
 
     return (
-       <section className={this.props.activeClass}>
-       <Card>
-        <h1>{this.props.text.header}</h1>
-        <ul>{previewTextEntries}<br /></ul>
-        </Card>
-       </section>
+      <section className={this.props.activeClass}>
+        <Card {...cardProps} />
+      </section>
     );
   }
 }

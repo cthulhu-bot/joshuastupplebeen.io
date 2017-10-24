@@ -12,6 +12,8 @@ export default class Card extends Component {
     };
     const avatarStyle = {
         margin: 50,
+        height: 100,
+        width: 100,
     };
     return (
       <Paper zDepth={1} style={paperStyle}>

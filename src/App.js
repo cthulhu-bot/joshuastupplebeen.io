@@ -87,6 +87,9 @@ class App extends Component {
     const iconStyles = {
       marginRight: 24,
     };
+    const footerProps = {
+      activeClass: 'main-footer',
+    };
     const githubIcon = props => (
       <SvgIcon {...props}>
         <path d="github.svg" />
@@ -122,7 +125,7 @@ class App extends Component {
               <Canvas {...canvasProps} />
               <Button {...buttonProps} />
             </main>
-            <footer className="main-footer">Footer</footer>
+            <Footer {...footerProps}></Footer>
           </div>
         </div>
       </MuiThemeProvider>

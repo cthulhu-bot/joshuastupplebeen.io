@@ -11,15 +11,13 @@ export default class Card extends Component {
       display: 'inline-block',
     };
     const avatarStyle = {
-        margin: 50,
+        margin: 70,
         height: 100,
         width: 100,
     };
     return (
       <Paper zDepth={1} style={paperStyle}>
-        <Avatar style={avatarStyle}>
-        <h1>{this.props.header}</h1>
-        <span><div>{this.props.body}</div></span>
+        <Avatar style={avatarStyle} src="https://www.fillmurray.com/200/300">
         </Avatar>
       </Paper>
     );

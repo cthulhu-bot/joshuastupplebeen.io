@@ -36,6 +36,7 @@
 .main-content {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .main-content1 {
@@ -45,6 +46,7 @@
     padding: 10px;
     background-color: #3c5b7f;
     margin: 1px;
+    justify-content: center;
 }
 .main-content2 {
     text-align: center;

@@ -16,9 +16,8 @@ export default class Card extends Component {
         width: 100,
     };
     return (
-      <Paper zDepth={1} style={paperStyle}>
-        <Avatar style={avatarStyle} src="https://www.fillmurray.com/200/300">
-        </Avatar>
+      <Paper style={paperStyle}>
+        <Avatar style={avatarStyle} src="https://lh4.googleusercontent.com/2DX6dGexZFGaT_MxlZrPj0Bte3yXOKgHkYI3BWgmy2b0nOJ2BfxrK6Eh8zdDFrcMd0J9hatv-o--a7w=w2880-h1360" />
       </Paper>
     );
   }

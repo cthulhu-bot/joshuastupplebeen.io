@@ -20,6 +20,7 @@ import {
 } from 'material-ui/BottomNavigation';
 import SvgIcon from 'material-ui/SvgIcon';
 import {sectionOneText} from './text';
+import { grey100, amber100, red100 } from 'material-ui/colors';
 
 class App extends Component {
   constructor(props) {
@@ -72,9 +73,9 @@ class App extends Component {
     };
     const muiTheme = createMuiTheme({
       palette: createPalette({
-          primary: 'grey',
-          accent: 'amber',
-          error: 'red',
+          primary: grey100,
+          accent: amber100,
+          error: red100,
       })
     });
     const paperStyle = {
@@ -125,7 +126,6 @@ class App extends Component {
               <Canvas {...canvasProps} />
               <Button {...buttonProps} />
             </main>
-            <Footer {...footerProps}></Footer>
           </div>
         </div>
       </MuiThemeProvider>
